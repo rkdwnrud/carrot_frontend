@@ -22,31 +22,33 @@ const MenuStyle: React.CSSProperties = {
   padding: "10px 5px",
 };
 const ButtomAppBar = (): JSX.Element => {
-  const menuItems: MenuType[] = {
-    title: "홈",
-    icon: <HomeIcon />,
-  };
-  const menuItems: MenuType[] = {
-    title: "동네생활",
-    icon: <FeaturedPlayListOutlinedIcon />,
-  };
-  const menuItems: MenuType[] = {
-    title: "내근처",
-    icon: <AddLocationTwoToneIcon />,
-  };
-  const menuItems: MenuType[] = {
-    title: "채팅",
-    icon: <ChatBubbleOutlineOutlinedIcon />,
-  };
-  const menuItems: MenuType[] = {
-    title: "나의 당근",
-    icon: <PersonOutlineOutlinedIcon />,
-  };
+  const menuItems: MenuType[] = [
+    {
+      title: "홈",
+      icon: <HomeIcon />,
+    },
+    {
+      title: "동네생활",
+      icon: <FeaturedPlayListOutlinedIcon />,
+    },
+    {
+      title: "내근처",
+      icon: <AddLocationTwoToneIcon />,
+    },
+    {
+      title: "채팅",
+      icon: <ChatBubbleOutlineOutlinedIcon />,
+    },
+    {
+      title: "나의 당근",
+      icon: <PersonOutlineOutlinedIcon />,
+    },
+  ];
   return (
     <AppBar position="fixed" sx={{ top: "auto", bottom: 0 }}>
       <Toolbar>
         <Grid container>
-          {menuItemClasses.map((item: MenuType): JSX.Element => {
+          {menuItems.map((item: MenuType): JSX.Element => {
             return (
               <Grid item xs key={item.title}>
                 <Box display="flex" justifyContent="center">
